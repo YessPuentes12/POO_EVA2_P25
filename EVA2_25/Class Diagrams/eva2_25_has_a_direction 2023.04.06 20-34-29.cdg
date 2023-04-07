@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="eva2_25_has_a_direction">
+  <ClassDiagramComponents>
+    <Class name="EVA2_25_HAS_A_DIRECTION" package="eva2_25_has_a_direction" visibility="public" xPosition="64.0" yPosition="0.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Direction" package="eva2_25_has_a_direction" visibility="public" xPosition="27.0" yPosition="116.0">
+      <Fields>
+        <Field name="calle" type="String" visibility="private"/>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="colonia" type="String" visibility="private"/>
+        <Field name="CP" type="String" visibility="private"/>
+        <Field name="ciudad" type="String" visibility="private"/>
+        <Field name="estado" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="calle"/>
+          <Argument type="int" name="numero"/>
+          <Argument type="String" name="colonia"/>
+          <Argument type="String" name="CP"/>
+          <Argument type="String" name="ciudad"/>
+          <Argument type="String" name="estado"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCalle" returnType="String" visibility="public"/>
+        <Method name="setCalle" returnType="void" visibility="public">
+          <Argument type="String" name="calle"/>
+        </Method>
+        <Method name="getNumero" returnType="int" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="int" name="numero"/>
+        </Method>
+        <Method name="getColonia" returnType="String" visibility="public"/>
+        <Method name="setColonia" returnType="void" visibility="public">
+          <Argument type="String" name="colonia"/>
+        </Method>
+        <Method name="getCP" returnType="String" visibility="public"/>
+        <Method name="setCP" returnType="void" visibility="public">
+          <Argument type="String" name="CP"/>
+        </Method>
+        <Method name="getCiudad" returnType="String" visibility="public"/>
+        <Method name="setCiudad" returnType="void" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="getEstado" returnType="String" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="String" name="estado"/>
+        </Method>
+        <Method name="imprimirData" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="eva2_25_has_a_direction" visibility="public" xPosition="578.0" yPosition="173.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="direccion" type="Direction" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="Direction" name="direccion"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getDireccion" returnType="Direction" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="Direction" name="direccion"/>
+        </Method>
+        <Method name="imprimirData" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Sucursal" package="eva2_25_has_a_direction" visibility="public" xPosition="603.0" yPosition="18.0">
+      <Fields>
+        <Field name="nomSucursal" type="String" visibility="private"/>
+        <Field name="direccion" type="Direction" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="direccion" source="eva2_25_has_a_direction.Persona" target="eva2_25_has_a_direction.Direction" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="direccion" source="eva2_25_has_a_direction.Sucursal" target="eva2_25_has_a_direction.Direction" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="eva2_25_has_a_direction.Persona" target="eva2_25_has_a_direction.Direction" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
